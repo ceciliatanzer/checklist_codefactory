@@ -51,23 +51,9 @@ Route::get('/admin', function()
 {
 $students = App\Students::all();
 return view('admin',compact('students')); 
-})->name('admin.dashboard');;
+})->name('admin.dashboard');
 
-Route::post('/detail',array('as' => 'admin.detail', function()
-      {
-  $students = App\Students::all();
-  $users = App\User::all();
-  return view('detail',compact('students', 'users')); 
-}));
-
-
- Route::get('/detail',array('as' => 'admin.detail',  function()
-      {
-  $students = App\Students::all();
-  $users = App\User::all();
-  return view('detail',compact('students', 'users')); 
-}));
-
+Route::resource('detail', 'AdminController');
 
 
 Route::get('/myaccount', function () {

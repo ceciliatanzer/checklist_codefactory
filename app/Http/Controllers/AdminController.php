@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 use App\Students;
 use Auth;
 use DB;
+use View;
+use Illuminate\Support\Facades\Input;
+use Session;
+use Illuminate\Support\Facades\Redirect;
 
 
 class AdminController extends Controller
@@ -28,14 +32,78 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $students = App\Students::all();
-        return view('admin');
+        $students = Students::all();
+        return view('admin')->with('students', $students);
     }
-    public function update(Request $request, $id)
+
+         public function store()
     {
-  $id = Auth::id();
-  
-  $students = App\Students::all();
-  return view('detail',compact('students', 'users')); 
+        $students = new Students;
+       
+        $students->firstname       = Input::get('firstname');
+        $students->lastname       = Input::get('lastname');
+        $students->phone       = Input::get('phone');
+        $students->occupation       = Input::get('occupation');
+        $students->birthdate       = Input::get('birthdate');
+        $students->street       = Input::get('street');
+        $students->street_number       = Input::get('street_number');
+        $students->plz       = Input::get('plz');
+        $students->city       = Input::get('city');
+        $students->country       = Input::get('country');
+        $students->essay       = Input::get('essay');
+        $students->user_id     = Input::get('user_id');
+        $students->save();
+// redirect
+            Session::flash('message', 'Successfully updated student!');
+            return Redirect::to('admin');
+    }
+
+         public function show($id)
+    {
+        $students = Students::find($id);
+        return View::make('detail')
+                ->with('students', $students);
+    }
+
+      public function edit($id)
+    {
+        $students = Students::find($id);
+        return View::make('detail')
+                ->with('students', $students);
+    }
+
+
+
+ 
+    public function update($id)
+    {
+        $students = Students::find($id);
+        $students->firstname       = Input::get('firstname');
+        $students->lastname       = Input::get('lastname');
+        $students->phone       = Input::get('phone');
+        $students->occupation       = Input::get('occupation');
+        $students->birthdate       = Input::get('birthdate');
+        $students->street       = Input::get('street');
+        $students->street_number       = Input::get('street_number');
+        $students->plz       = Input::get('plz');
+        $students->city       = Input::get('city');
+        $students->country       = Input::get('country');
+        $students->essay       = Input::get('essay');
+        $students->user_id     = Input::get('user_id');
+        $students->save();
+// redirect
+            Session::flash('message', 'Successfully updated student!');
+            return Redirect::to('admin');
+    }
+
+     public function destroy($id)
+    {
+        // delete
+        $students = Students::find($id);
+        $students->delete();
+
+        // redirect
+        Session::flash('message', 'Successfully deleted the nerd!');
+        return Redirect::to('admin');
     }
 }
