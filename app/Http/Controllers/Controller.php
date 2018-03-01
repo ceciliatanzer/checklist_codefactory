@@ -13,10 +13,30 @@ use DB;
 
 class Controller extends BaseController
 {
+
+
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     function insert (Request $req)
     {
+
+
+      $this->validate(request(), [
+        'firstname' => 'required',
+        'lastname' => 'required',
+        'phone' => 'required',
+        'occupation' => 'required',
+        'birthdate' => 'required',
+        'street' => 'required',
+        'street_number' => 'required',
+        'plz' => 'required',
+        'city' => 'required',
+        'country' => 'required',
+        'essay' => 'required'
+    ]);
+
+
+
         $firstname = $req->input('firstname');
         $lastname = $req->input('lastname');
         $phone = $req->input('phone');

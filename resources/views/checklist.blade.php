@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+
+
+
+
+
 <html lang="{{ config('app.locale') }}">
     <head>
         <title>Laravel</title>
@@ -79,6 +85,19 @@
 
         @yield('content')
     </div>
+
+    @if (count($errors))
+<div class="form-group col-lg-12">
+<h2>Please fill these fields up</h2>
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+</div>
+@endif
 
 <div class="container-fluid">
   <div style="margin-top: -25px;" class="row">
@@ -162,7 +181,7 @@
 
 <div style="margin-top: 10px;" class="row">
 <div class="col-lg-12" class="form-group">
-<textarea class="form-control" name="essay" rows="5" cols="40" placeholder="please write a short essay"></textarea>
+<textarea class="form-control" name="essay" rows="5" cols="40" placeholder="please write us about your self"></textarea>
 </div>
 </div>
 
