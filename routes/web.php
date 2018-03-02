@@ -19,7 +19,7 @@ Route::resource('checklist', 'Controller');
 
 //Route::get('/checklist', function () {
 //return view('checklist');
-// })->name('checklist');
+//})->name('checklist');
 
 //insert Checklist
 Route::post('/insert', 'Controller@insert');
@@ -57,10 +57,7 @@ return view('admin',compact('students','checklist'));
 })->name('admin.dashboard');
 
 Route::resource('detail', 'AdminController');
-<<<<<<< Updated upstream
 Route::resource('detailchecklist', 'ChecklistdetailController');
-=======
-Route::resource('myaccount', 'MyAccountController');
->>>>>>> Stashed changes
+Route::resource('myaccount', 'myaccountController');
 
 

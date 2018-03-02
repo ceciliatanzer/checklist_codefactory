@@ -98,7 +98,7 @@ function insert_passport (Request $request){
     [
     'passport'  => $request->get('passport'),
     ]);
-return redirect()->route('checklist');
+    return Redirect::to('checklist');
    }
   
 function insert_financing (Request $request){
@@ -107,7 +107,7 @@ function insert_financing (Request $request){
     [
     'financing' => $request->get('financing'),
     ]);
-return redirect()->route('checklist');
+    return Redirect::to('checklist');
    }
 
 function insert_insurance (Request $request){
@@ -116,7 +116,7 @@ function insert_insurance (Request $request){
    [
    'insurance' => $request->get('insurance'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
 function insert_pass(Request $request){
@@ -125,7 +125,7 @@ function insert_pass(Request $request){
    [
    'pass' => $request->get('pass'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
 function insert_visaform(Request $request){
@@ -134,7 +134,7 @@ function insert_visaform(Request $request){
    [
    'visaform' => $request->get('visaform'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
 function insert_picture(Request $request){
@@ -143,7 +143,7 @@ function insert_picture(Request $request){
    [
    'picture' => $request->get('picture'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
 function insert_travelreservation(Request $request){
@@ -152,7 +152,7 @@ function insert_travelreservation(Request $request){
    [
    'travelreservation' => $request->get('travelreservation'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
 function insert_hotelreservation(Request $request){
@@ -161,7 +161,7 @@ function insert_hotelreservation(Request $request){
    [
    'hotelreservation' => $request->get('hotelreservation'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
   
 function insert_employment(Request $request){
@@ -170,7 +170,7 @@ function insert_employment(Request $request){
    [
    'employment' => $request->get('employment'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
 function insert_travelinsurance(Request $request){
@@ -179,7 +179,7 @@ function insert_travelinsurance(Request $request){
    [
    'travelinsurance' => $request->get('travelinsurance'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
 function insert_financial_means(Request $request){
@@ -188,7 +188,7 @@ function insert_financial_means(Request $request){
    [
    'financial_means' => $request->get('financial_means'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
  function insert_passcopy(Request $request){
@@ -197,7 +197,7 @@ return redirect()->route('checklist');
    [
    'passcopy' => $request->get('passcopy'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
 function insert_consularfee(Request $request){
@@ -206,7 +206,7 @@ function insert_consularfee(Request $request){
    [
    'consularfee' => $request->get('consularfee'),
    ]);
-return redirect()->route('checklist');
+   return Redirect::to('checklist');
   }
 
 }
