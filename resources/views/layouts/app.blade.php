@@ -75,6 +75,21 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
+
+                        @if (Auth::guard('admin')->check())
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                        @endif
+                        
                         @if (Auth::guest())
                         <li class="col-lg-4"><a href="{{ url('/login') }}">Login</a></li>
                         <li class="col-lg-4"><a href="{{ url('/register') }}">Register</a></li>
