@@ -41,7 +41,6 @@ class AdminController extends Controller
          public function store()
     {
         $students = new Students;
-       
         $students->firstname       = Input::get('firstname');
         $students->lastname       = Input::get('lastname');
         $students->phone       = Input::get('phone');
@@ -74,9 +73,6 @@ class AdminController extends Controller
                 ->with('students', $students);
     }
 
-
-
- 
     public function update($id)
     {
         $students = Students::find($id);

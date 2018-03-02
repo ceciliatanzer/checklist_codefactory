@@ -6,8 +6,11 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\checklist;
+use App\Students;
+use View;
 use Auth;
 use DB;
 
@@ -16,6 +19,26 @@ class Controller extends BaseController
 
 
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+
+    
+    public function index(){
+      $id = Auth::id();
+      $students = DB::table('students')->where('user_id','=',$id)->pluck('id');
+     
+      return View::make('checklist', compact('students', 'id')); 
+             
+
+      }
+      public function show($id)
+      {
+          
+          $students = Students::find($id);
+          return View::make('checklist')
+                  ->with('students', $students);
+      }
+
+     
 
     function insert (Request $req)
     {
@@ -66,7 +89,7 @@ class Controller extends BaseController
 
         DB::table('students')->insert($data);
 
-        return redirect()->route('checklist');
+        return Redirect::to('checklist');
     }
 
 function insert_passport (Request $request){

@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 
-
-
-
-
-
 <html lang="{{ config('app.locale') }}">
     <head>
         <title>Laravel</title>
@@ -75,8 +70,12 @@
                                         </form>
                                     </li>
                                     <li><a href="{{ url('/checklist') }}">checklist</a></li>
-                                    <li><a href="{{ url('/myaccount') }}">myaccount</a></li>
 
+                             
+                                   
+                                       <li><a href="{{ URL::to('myaccount/' . $students) }}">myaccount</a></li>
+
+                              
                         @endif
                     </ul>
                 </div>
@@ -86,7 +85,8 @@
         @yield('content')
     </div>
 
-    @if (count($errors))
+
+@if (count($errors))
 <div class="form-group col-lg-12">
 <h2>Please fill these fields up</h2>
 <div class="alert alert-danger">
@@ -283,10 +283,7 @@ Info info info
 <div class="col-md-2">
 </div>
 <div class="col-md-8 text-center">
-<div style="margin-top: -25px;" class="row">
-
-<div class="col-md-4 col-sm-4 col-xs-6"> <a href="#" class="btn btn-sm animated-button thar-one" onclick="openCity(event, 'Apply')">Step 1 Application</a> </div>
-<div class="col-md-4 col-sm-4 col-xs-6"> <a href="#" class="btn btn-sm animated-button thar-two" onclick="openCity(event, 'Passport')">Step 2 Passport</a> </div>
+<div class="row">
 
 </div>
 a. This course is 4 months long and will require a D VISA. The application process can take up to 15 days. We recommend applying 2 months before the course start date.
