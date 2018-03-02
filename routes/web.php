@@ -50,10 +50,12 @@ Route::prefix('admin')->group(function() {
 Route::get('/admin', function()
 {
 $students = App\Students::all();
-return view('admin',compact('students')); 
+$checklist = App\checklist::all();
+return view('admin',compact('students','checklist')); 
 })->name('admin.dashboard');
 
 Route::resource('detail', 'AdminController');
+Route::resource('detailchecklist', 'ChecklistdetailController');
 
 
 Route::get('/myaccount', function () {

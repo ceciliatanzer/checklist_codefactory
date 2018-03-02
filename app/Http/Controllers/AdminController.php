@@ -11,6 +11,7 @@ use View;
 use Illuminate\Support\Facades\Input;
 use Session;
 use Illuminate\Support\Facades\Redirect;
+use App\checklist;
 
 
 class AdminController extends Controller
@@ -33,7 +34,8 @@ class AdminController extends Controller
     public function index()
     {
         $students = Students::all();
-        return view('admin')->with('students', $students);
+        $checklist = checklist::all();
+        return view('admin',compact('students','checklist')); 
     }
 
          public function store()
