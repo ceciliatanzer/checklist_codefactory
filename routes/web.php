@@ -15,6 +15,8 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+
+
 Route::resource('checklist', 'Controller');
 
 //Route::get('/checklist', function () {
@@ -40,6 +42,10 @@ Route::post('/insert_passcopy', 'Controller@insert_passcopy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/email', 'HomeController@email')->name('sendEmail');
+
+
 Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 
 Route::prefix('admin')->group(function() {

@@ -417,15 +417,15 @@ No
 <br>
 <br>
 e.xvi. Please see this page for more information http://www.austria.org/visa-application/
+<br>
+<br>
+<a href="{{route('sendEmail')}}" class="btn-lg btn-primary">Enroll</a>
 
 
 </div>
 <div class="col-md-2">
 </div>
 </div>
-
-
-
 
 
 </body>
