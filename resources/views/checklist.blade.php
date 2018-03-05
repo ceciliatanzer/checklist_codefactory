@@ -100,7 +100,7 @@
 @endif
 
 <div class="container-fluid">
-  <div style="margin-top: -25px;" class="row">
+  <div style="margin-top: -40px;" class="row">
     <div class="col-md-12 text-center">
      <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button thar-one" onclick="openCity(event, 'Apply')">Step 1 Application</a> </div>
     <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button thar-two" onclick="openCity(event, 'Passport')">Step 2 Passport</a> </div>
@@ -280,150 +280,156 @@ Info info info
   <div class="row">
     <div id="Visa" class="col-md-12 tabcontent">  
 <script src="{{ asset('js/app.js') }}"></script>
-<div class="col-md-2">
+<div class="col-md-1">
 </div>
-<div class="col-md-8 text-center">
-<div class="row">
+<div class="col-md-10">
 
+<div id="list_visa" >
+    This course is 4 months long and will require a D VISA. The application process can take up to 15 days. We recommend applying 2 months before the course start date.
 </div>
-a. This course is 4 months long and will require a D VISA. The application process can take up to 15 days. We recommend applying 2 months before the course start date.
-b. You can view a complete form and learn more about the process here: 
-c. http://www.austria.org/visa-application/
-d. Please note that Coding Bootcamps are not recognized by the USA or Austria as accredited schools. You must apply for the D VISA as a tourist and state you are attending a bootcamp.
-e. You will need the following:
-e.i. Proof of financing. Once approved by a bank you will need the letter of approval. We recommend not taking the loan out until after you have received your VISA.
-e.ii. The Consular Fee: http://www.austria.org/consular-fees
-e.iii. ALL visa applicants must appear in person at the Austrian Embassy/Consulate. The Austrian Embassy and Consulates General do not accept visa applications by mail.
-e.iv. If you wish to have your documents returned by U.S. mail, please enclose a self-addressed, stamped envelope (including the Certified Mail Receipt) with your application. The Austrian Embassy or Consulate General is not responsible for documents after they are mailed.
-e.v. The following documents:
-<br><br>
-<form action="/insert_pass" method="post">
-{{csrf_field()}}
-e.vi.  Valid and signed passport or travel document (passport/travel document must be valid for at least three months after the date of departure from Austria or the Schengen zone. Further, the first issue date of your passport must not be more than 10 years ago, and it must provide at least two empty pages. In the case of minors, a notarized signature of parent or guardian is required.)
-Yes 
-<input type="checkbox" name="pass"  value="1" onchange="this.form.submit()"/>
-No
-<input type="checkbox" name="pass"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
 
-<form action="/insert_visaform" method="post">
-{{csrf_field()}}
-e.vii. <a href="https://static1.squarespace.com/static/54b9309be4b06e38ad5da1ca/t/55e75a54e4b0c94c8afbdc59/1441225300774/Formular_D_Antrag.pdf">D VISA Form</a>
-Yes 
+<div id="list_visa" style="padding-top:10px;">
+    You can view a complete form and learn more about the process here: <a href="http://www.austria.org/visa-application/">austria.org/visa-application</a>
+</div>
+ 
+<div id="list_visa" style="padding-top:10px;">
+    Please note that Coding Bootcamps are not recognized by the USA or Austria as accredited schools. You must apply for the D VISA as a tourist and state you are attending a bootcamp.
+</div>
+ 
+<div style="width:100%; font-family: Chivo !important; font-size:18px;  color:#000; padding-left:8px; padding-top:10px;">
+<i> <b>  You will need the following:</b></i>
+    </div>
+<div id="list2">
+   <ol>
+      <li><p style="font-family: Chivo !important; font-size:18px; color:#000;" >Proof of financing. Once approved by a bank you will need the letter of approval. We recommend not taking the loan out until after you have received your VISA.</li>
+      <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">The Consular Fee:<a href="http://www.austria.org/consular-fees"> consular-fees</a></p></li>
+      <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">ALL visa applicants must appear in person at the Austrian Embassy/Consulate. The Austrian Embassy and Consulates General do not accept visa applications by mail.</p></li>
+      <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">If you wish to have your documents returned by U.S. mail, please enclose a self-addressed, stamped envelope (including the Certified Mail Receipt) with your application. The Austrian Embassy or Consulate General is not responsible for documents after they are mailed.</p></li>
+      </ol>
+    </div>
+
+    <div style="width:100%; font-family: Chivo !important; font-size:18px;  color:#000; padding-left:8px;">
+    <i> <b> You will need to check the follwing list to be able to enroll:</b></i>
+    </div>
+    <div id="list2">
+        <ol>
+        <form action="/insert_pass" method="post">{{csrf_field()}} 
+        <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
+        Valid and signed passport or travel document (passport/travel document must be valid for at least three months after the date of departure from Austria or the Schengen zone. Further, the first issue date of your passport must not be more than 10 years ago, and it must provide at least two empty pages. In the case of minors, a notarized signature of parent or guardian is required.)
+        <br>
+        Yes 
+        <input type="checkbox" name="pass"  value="1" onchange="this.form.submit()"/>
+        No
+        <input type="checkbox" name="pass"  value="0"/>
+        <input class="btn-sm btn-default"  type="submit" name"submit" value="Add">  
+        </p></li> </form> 
+
+        <form action="/insert_visaform" method="post">{{csrf_field()}} 
+        <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
+        <a href="https://static1.squarespace.com/static/54b9309be4b06e38ad5da1ca/t/55e75a54e4b0c94c8afbdc59/1441225300774/Formular_D_Antrag.pdf">D VISA Form</a>
+<br>
+        Yes 
 <input type="checkbox" name="visaform"  value="1" onchange="this.form.submit()"/>
 No
 <input type="checkbox" name="visaform"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
+<input class="btn-sm btn-default"  type="submit" name"submit" value="Add">  
+</p></li> </form> 
 
-<form action="/insert_picture" method="post">
-{{csrf_field()}}
-e.viii. One (1) recent passport picture, which strictly has to meet the following criteria: max. head size 1.4 inch (36 mm), min. eye distance 0.3 inch (8mm), american picture format accepted.
-Yes 
+ <form action="/insert_picture" method="post">{{csrf_field()}}
+        <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
+       One (1) recent passport picture, which strictly has to meet the following criteria: max. head size 1.4 inch (36 mm), min. eye distance 0.3 inch (8mm), american picture format accepted.
+<Br>
+       Yes 
 <input type="checkbox" name="picture"  value="1" onchange="this.form.submit()"/>
 No
 <input type="checkbox" name="picture"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
+<input class="btn-sm btn-default"  type="submit" name"submit" value="Add">
+</p></li> </form> 
 
-<form action="/insert_travelreservation" method="post">
-{{csrf_field()}}
-e.ix. Travel itinerary/ airline reservation (showing dates of travel) for entire journey. (These do not need to be booked. We will provide you with an itinerary.)
-Yes 
+<form action="/insert_travelreservation" method="post">{{csrf_field()}}
+        <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
+        Travel itinerary/ airline reservation (showing dates of travel) for entire journey. (These do not need to be booked. We will provide you with an itinerary.)
+<br>
+        Yes 
 <input type="checkbox" name="travelreservation"  value="1" onchange="this.form.submit()"/>
 No
 <input type="checkbox" name="travelreservation"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
+<input class="btn-sm btn-default"  type="submit" name"submit" value="Add">
+</p></li> </form> 
 
-<form action="/insert_hotelreservation" method="post">
-{{csrf_field()}}
-e.x. Hotel reservation. (We will include this in our itinerary.)
-Yes 
-<input type="checkbox" name="hotelreservation"  value="1" onchange="this.form.submit()"/>
-No
-<input type="checkbox" name="hotelreservation"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
-
-<form action="/insert_employment" method="post">
-{{csrf_field()}}
-e.xi. Letter of employment in the U.S.
-Yes 
+<form action="/insert_employment" method="post">{{csrf_field()}}
+        <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
+        Letter of employment in the U.S.
+<bR>
+        Yes 
 <input type="checkbox" name="employment"  value="1" onchange="this.form.submit()"/>
 No
 <input type="checkbox" name="employment"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
+<input class="btn-sm btn-default"  type="submit" name"submit" value="Add">
+</p></li> </form> 
 
-<form action="/insert_travelinsurance" method="post">
-{{csrf_field()}}
-e.xii. Proof of travel insurance or health/accident insurance providing coverage in the Schengen countries: stating name of insurance company, type of coverage (sickness, accident, medical evacuation, repatriation of human remains), amount of coverage (minimum USD 50,000) and option of direct payment (insurance company must have a service provider in the Schengen area or an arrangement with a service provider in the Schengen area; no deductible, no reimbursement policy accepted) (We will provide this with the itinerary.)
-Yes 
+
+<form action="/insert_travelinsurance" method="post">{{csrf_field()}}
+        <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
+        Proof of travel insurance or health/accident insurance providing coverage in the Schengen countries: stating name of insurance company, type of coverage (sickness, accident, medical evacuation, repatriation of human remains), amount of coverage (minimum USD 50,000) and option of direct payment (insurance company must have a service provider in the Schengen area or an arrangement with a service provider in the Schengen area; no deductible, no reimbursement policy accepted) (We will provide this with the itinerary.)
+<br>
+        Yes 
 <input type="checkbox" name="travelinsurance"  value="1" onchange="this.form.submit()"/>
 No
 <input type="checkbox" name="travelinsurance"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
+<input class="btn-sm btn-default"  type="submit" name"submit" value="Add">
+</p></li> </form> 
 
-<form action="/insert_financial_means" method="post">
-{{csrf_field()}}
-e.xiii. Proof of financial means (e.g. scholarship, letter of grants, bank statement of last two months, other proof of income). Include the letter of approval from the bank.
-Yes 
-<input type="checkbox" name="financial_means"  value="1" onchange="this.form.submit()"/>
+<form action="/insert_financial_means" method="post">{{csrf_field()}}
+        <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
+        Proof of financial means (e.g. scholarship, letter of grants, bank statement of last two months, other proof of income). Include the letter of approval from the bank.
+<br>
+        Yes 
+<input  type="checkbox" name="financial_means"  value="1" onchange="this.form.submit()"/>
 No
 <input type="checkbox" name="financial_means"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
+<input class="btn-sm btn-default"  type="submit" name"submit" value="Add">
+</p></li> </form> 
 
-<form action="/insert_passcopy" method="post">
-{{csrf_field()}}
-e.xiv. Copy of the passport and copy of the "Green Card" or US visa
-Yes 
+<form action="/insert_passcopy" method="post">{{csrf_field()}}
+        <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
+        Copy of the passport and copy of the "Green Card" or US visa
+<bR>
+        Yes 
 <input type="checkbox" name="passcopy"  value="1" onchange="this.form.submit()"/>
 No
 <input type="checkbox" name="passcopy"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
+<input class="btn-sm btn-default" type="submit" name"submit" value="Add">
+</p></li> </form> 
 
-<form action="/insert_consularfee" method="post">
-{{csrf_field()}}
-e.xv. Consular fees: payment must be made in US$ per postal money order, cashier's check (payable to Embassy of Austria) or cash (exact change only please).
+<form action="/insert_consularfee" method="post">{{csrf_field()}}
+        <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
+        Consular fees: payment must be made in US$ per postal money order, cashier's check (payable to Embassy of Austria) or cash (exact change only please).
+
+<bR>
 Yes 
 <input type="checkbox" name="consularfee"  value="1" onchange="this.form.submit()"/>
 No
 <input type="checkbox" name="consularfee"  value="0"/>
-<input type="submit" name"submit" value="Add">
-</form>
-<br>
-<br>
-e.xvi. Please see this page for more information http://www.austria.org/visa-application/
+<input class="btn-sm btn-default" type="submit" name"submit" value="Add">
+</p></li> </form> 
+
+    </ol>
+
+
+
+   <div id="list_visa">
+    Please see this page for more information <a href="http://www.austria.org/visa-application/">www.austria.org/visa-application</a>
+    </div>
+    
+
 <br>
 <br>
 <a href="{{route('sendEmail')}}" class="btn-lg btn-primary">Enroll</a>
 
 
 </div>
-<div class="col-md-2">
+<div class="col-md-1">
 </div>
 </div>
 

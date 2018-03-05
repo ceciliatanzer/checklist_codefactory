@@ -24,7 +24,12 @@ class Controller extends BaseController
     
     public function index(){
       $id = Auth::id();
+<<<<<<< Updated upstream
       $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
+=======
+      $students = DB::table('students')->where('user_id','=' ,$id)->pluck('id');
+     
+>>>>>>> Stashed changes
       return View::make('checklist', compact('students', 'id')); 
              
 
