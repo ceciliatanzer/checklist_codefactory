@@ -544,3 +544,15 @@ div.polaroid {
 	  background-color: #831213;
   }
   
+  .welchead{
+	  font-size: 60px;
+  }
+
+  @media screen and (max-width: 320px) {
+	p {
+		font-size: 20px;
+	}
+	.welchead{
+		font-size: 40px;
+	}
+}
