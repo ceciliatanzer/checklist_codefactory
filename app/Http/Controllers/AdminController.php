@@ -33,7 +33,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $students = Students::all();
+        $students = Students::with('checklist')->get();
         $checklist = checklist::all();
         return view('admin',compact('students','checklist')); 
     }

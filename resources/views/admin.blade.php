@@ -27,22 +27,23 @@
       </tr>
     </thead>
     <tbody>
+   
     
-   @foreach($checklist as $students => $value)
-
+   @foreach($students as $student)
+        @foreach ($student->checklist as $checklist)
       <tr>
-        <td><a href="{{ URL::to('detail/' . $value->id . '/edit') }}" >{{$value->firstname}}</a></td>
-        <td>{{$value->lastname}}</td>
-        <td>{{$value->phone}}</td>
-        <td><a href="{{ URL::to('detailchecklist/' . $value->id ) }}">details...</a></td>
-        <td><form action="{{ url('detail/' . $value->id )}}" method="post">
+        <td><a href="{{ URL::to('detail/' . $student->id . '/edit') }}" >{{$student->firstname}}</a></td>
+        <td>{{$student->lastname}}</td>
+        <td>{{$student->phone}}</td>
+        <td><a href="{{ URL::to('detailchecklist/' . $checklist->id ) }}">details...</a></td>
+        <td><form action="{{ url('detail/' . $student->id )}}" method="post">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
             <button>DELETE</button>
             </form>  
         </td>      
-      </tr>
-
+      </tr> 
+        @endforeach
        @endforeach
     </tbody>
   </table>
