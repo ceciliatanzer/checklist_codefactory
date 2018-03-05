@@ -24,6 +24,8 @@ class MyAccountController extends Controller
         $students = Students::all();
         return View::make('myaccount')
                 ->with('students', $students);
+                var_dump($students);
+                exit();
         }
 
          public function store()

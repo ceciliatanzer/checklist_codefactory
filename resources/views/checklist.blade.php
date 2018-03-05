@@ -73,7 +73,7 @@
 
                              
                                    
-                                       <li><a href="{{ URL::to('myaccount/' . $students) }}">myaccount</a></li>
+                                       <li><a href="{{ URL::to('myaccount/' . $students[0]) }}">myaccount</a></li>
 
                               
                         @endif

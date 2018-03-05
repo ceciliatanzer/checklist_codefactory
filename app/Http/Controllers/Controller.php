@@ -25,7 +25,6 @@ class Controller extends BaseController
     public function index(){
       $id = Auth::id();
       $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
-     
       return View::make('checklist', compact('students', 'id')); 
              
 
