@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="{{ config('app.locale') }}">
     <head>
         <title>Laravel</title>
@@ -102,100 +101,10 @@
 <div class="container-fluid">
   <div style="margin-top: -40px;" class="row">
     <div class="col-md-12 text-center">
-     <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button thar-one" onclick="openCity(event, 'Apply')">Step 1 Application</a> </div>
-    <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button thar-two" onclick="openCity(event, 'Passport')">Step 2 Passport</a> </div>
-    <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button thar-three" onclick="openCity(event, 'Finance')"> Step 3 Finance and Insurance</a> </div>
-    <div class="col-md-3 col-sm-3 col-xs-6"> <a href="#" class="btn btn-sm animated-button thar-four" onclick="openCity(event, 'Visa')" >Step 4 Visa</a> </div>
+    <div class="col-md-4 col-sm-4 col-xs-12"> <a href="#" class="btn btn-sm animated-button thar-one" onclick="openCity(event, 'Passport')">Step 1 Passport</a> </div>
+    <div class="col-md-4 col-sm-4 col-xs-12"> <a href="#" class="btn btn-sm animated-button thar-two" onclick="openCity(event, 'Finance')"> Step 2 Finance and Insurance</a> </div>
+    <div class="col-md-4 col-sm-4 col-xs-12"> <a href="#" class="btn btn-sm animated-button thar-one" onclick="openCity(event, 'Visa')" >Step 3 Visa</a> </div>
   </div>
-</div>
-
-<div class="container-fluid">
-  <div style="margin-top: 10px;"  class="row">
-    <div id="Apply" class="col-md-12 tabcontent">  
-<script src="{{ asset('js/app.js') }}"></script>
-<div class="col-md-2">
-</div>
-<div class="col-md-8">
-<form action="/insert" method="post">
-{{csrf_field()}}
-
-<div class="row">
-<div class="col-lg-6" class="form-group">
-    <label>Firstname</label>
-    <input type="text" class="form-control"  name="firstname">
-</div>
-
-<div class="col-lg-6" class="form-group">
-    <label>Lastname</label>
-    <input type="text" class="form-control"  name="lastname">
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6" class="form-group">
-    <label>Phonenumber</label>
-    <input type="text" class="form-control"  name="phone">
-</div>
-
-<div class="col-lg-6" class="form-group">
-    <label>Occupation</label>
-    <input type="text" class="form-control"  name="occupation">
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6" class="form-group">
-    <label>Birthdate</label>
-    <input type="date" class="form-control"  name="birthdate">
-</div>
-
-<div class="col-lg-6" class="form-group">
-    <label>Street</label>
-    <input type="text" class="form-control"  name="street">
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6" class="form-group">
-    <label>Streetnumber</label>
-    <input type="number" class="form-control"  name="street_number">
-</div>
-
-<div class="col-lg-6" class="form-group">
-    <label>Postelcode</label>
-    <input type="number" class="form-control"  name="plz">
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6" class="form-group">
-    <label>City</label>
-    <input type="text" class="form-control"  name="city">
-</div>
-
-<div class="col-lg-6" class="form-group">
-    <label>Country</label>
-    <input type="text" class="form-control"  name="country">
-</div>
-</div>
-
-<div style="margin-top: 10px;" class="row">
-<div class="col-lg-12" class="form-group">
-<textarea class="form-control" name="essay" rows="5" cols="40" placeholder="please write us about your self"></textarea>
-</div>
-</div>
-
-<div style="margin-top: 10px;" class="row">
-<div class="col-md-5">
-</div>
-<input class="btn-lg btn-primary col-md-2" type="submit" name"submit" value="Add">
-</div>
-<div class="col-md-5">
-</div>
-</form>
-</div>
-<div class="col-md-2">
-</div>
 </div>
 
 <div class="container-fluid">
@@ -421,16 +330,22 @@ No
    <div id="list_visa">
     Please see this page for more information <a href="http://www.austria.org/visa-application/">www.austria.org/visa-application</a>
     </div>
-    
+    </div>
+    <div class="col-md-1">
+    </div>
 
-<br>
-<br>
-<a href="{{route('sendEmail')}}" class="btn-lg btn-primary">Enroll</a>
+<div style="margin-top: 20px;" class="row">
 
+<div class="col-md-5 col-xs-1">
+</div>
+<div class="col-md-2 col-xs-10">
+<a href="{{route('sendEmail')}}" class="btn-lg btn-default">Enroll</a>
+</div>
+<div class="col-md-5 col-xs-1">
+</div>
 
 </div>
-<div class="col-md-1">
-</div>
+
 </div>
 
 

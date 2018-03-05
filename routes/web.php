@@ -15,16 +15,17 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-
+Route::get('/application', function () {
+  return view('application');
+});
 
 Route::resource('checklist', 'Controller');
 
-//Route::get('/checklist', function () {
-//return view('checklist');
-//})->name('checklist');
+
+//insert Application
+Route::post('/insert', 'Controller@insert');
 
 //insert Checklist
-Route::post('/insert', 'Controller@insert');
 Route::post('/insert_passport', 'Controller@insert_passport');
 Route::post('/insert_financing', 'Controller@insert_financing');
 Route::post('/insert_insurance', 'Controller@insert_insurance');
