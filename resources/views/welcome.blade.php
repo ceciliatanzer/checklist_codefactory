@@ -21,7 +21,7 @@
 
 
 <div class="container-fluid">
-<div class="row w3-container w3-center" style="padding:110px 16px">
+<div class="row w3-container w3-center" style="padding:70px 16px">
 <div class="col-lg-6 col-lg-offset-3">
 
   <h1 class="w3-jumbo">What are you waiting for?</h1>
@@ -31,10 +31,10 @@
     <p>Life Changing Experience</p>
     <p>In-Demand Career</p>
     <br>
-    <p>Refer a friend and receive 10% off your cost up to $10,000</p>  
+      
     </div>
-    <a href="{{url('/register')}}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Register</a>
-  
+    <a href="{{url('/register')}}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Sign up</a>
+    <h3>Refer a friend and receive 10% off your cost up to $10,000</h3>
 
 </div>
 </div>
