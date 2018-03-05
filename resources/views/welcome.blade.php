@@ -28,9 +28,10 @@
   <div class="w3-xlarge">
   
     <p>Average Full-Stack Developer Salary $88,488</p>
-    <p>Life Changing Experience</p>
     <p>In-Demand Career</p>
-    <br>
+    <p>Life Changing Experience</p>
+    
+    
       
     </div>
     <a href="{{url('/register')}}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Sign up</a>
@@ -83,7 +84,7 @@
 <div class="row">
 
 <div class="col-lg-offset-3 col-lg-6">
-<h2 style="color: #831213; font-family: Chivo !important">Get a new career and the experience of a lifetime </h2>
+<h2 style="color: #831213; font-family: Chivo !important; text-align: center">Get a new career and the experience of a lifetime </h2>
 </div>
 </div>
 
