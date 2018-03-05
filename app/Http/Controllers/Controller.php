@@ -86,17 +86,27 @@ class Controller extends BaseController
     }
 
 function insert_passport (Request $request){
+     $id = Auth::id();
+     $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
+    
      $checklist = \App\checklist::updateOrCreate([
-    'user_id'   => Auth::user()->id,],
+
+    'user_id'   => $id,
+    'students_id' => $students[0],],
     [
     'passport'  => $request->get('passport'),
     ]);
     return Redirect::to('checklist');
    }
+
+
   
 function insert_financing (Request $request){
+     $id = Auth::id();
+     $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
      $checklist = \App\checklist::updateOrCreate([
-    'user_id'   => Auth::user()->id,],
+    'user_id'   => Auth::user()->id,
+    'students_id' => $students[0],],
     [
     'financing' => $request->get('financing'),
     ]);
@@ -104,8 +114,11 @@ function insert_financing (Request $request){
    }
 
 function insert_insurance (Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $checklist = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'insurance' => $request->get('insurance'),
    ]);
@@ -113,8 +126,11 @@ function insert_insurance (Request $request){
   }
 
 function insert_pass(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $pass = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+    'students_id' => $students[0],],
    [
    'pass' => $request->get('pass'),
    ]);
@@ -122,8 +138,11 @@ function insert_pass(Request $request){
   }
 
 function insert_visaform(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $visaform = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'visaform' => $request->get('visaform'),
    ]);
@@ -131,8 +150,11 @@ function insert_visaform(Request $request){
   }
 
 function insert_picture(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $picture = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'picture' => $request->get('picture'),
    ]);
@@ -140,8 +162,11 @@ function insert_picture(Request $request){
   }
 
 function insert_travelreservation(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $travelreservation = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'travelreservation' => $request->get('travelreservation'),
    ]);
@@ -149,8 +174,11 @@ function insert_travelreservation(Request $request){
   }
 
 function insert_hotelreservation(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $hotelreservation = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'hotelreservation' => $request->get('hotelreservation'),
    ]);
@@ -158,8 +186,11 @@ function insert_hotelreservation(Request $request){
   }
   
 function insert_employment(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $employment = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'employment' => $request->get('employment'),
    ]);
@@ -167,8 +198,11 @@ function insert_employment(Request $request){
   }
 
 function insert_travelinsurance(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $travelinsurance = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'travelinsurance' => $request->get('travelinsurance'),
    ]);
@@ -176,8 +210,11 @@ function insert_travelinsurance(Request $request){
   }
 
 function insert_financial_means(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $financial_means = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'financial_means' => $request->get('financial_means'),
    ]);
@@ -185,8 +222,11 @@ function insert_financial_means(Request $request){
   }
 
  function insert_passcopy(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $passcopy = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'passcopy' => $request->get('passcopy'),
    ]);
@@ -194,8 +234,11 @@ function insert_financial_means(Request $request){
   }
 
 function insert_consularfee(Request $request){
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
     $consularfee = \App\checklist::updateOrCreate([
-   'user_id'   => Auth::user()->id,],
+   'user_id'   => Auth::user()->id,
+   'students_id' => $students[0],],
    [
    'consularfee' => $request->get('consularfee'),
    ]);
