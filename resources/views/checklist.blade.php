@@ -111,9 +111,9 @@
   <div class="row">
     <div id="Passport" class="col-md-12 tabcontent">  
 <script src="{{ asset('js/app.js') }}"></script>
-<div class="col-md-2">
+<div class="col-md-1">
 </div>
-<div class="col-md-8 text-center">
+<div class="col-md-10 text-center" id="list_visa">
 <form action="/insert_passport" method="post">
 {{csrf_field()}}
 Do you have a passport? <br>
@@ -121,69 +121,78 @@ Yes
 <input type="checkbox" name="passport" id="passportYes" value="1" onchange="this.form.submit()"/>
 No
 <input type="checkbox" name="passport" id="passportNo" value="0"/>
-<div>
+
 What you need for a passport <a href="https://www.usps.com/international/passports.htm">Link</a>
-</div>
+
 </form>
 </div>
 <div class="col-md-2">
+</div>
 </div>
 </div>
 
 
 
 <div class="container-fluid">
+
   <div class="row">
     <div id="Finance" class="col-md-12 tabcontent">  
 <script src="{{ asset('js/app.js') }}"></script>
-<div class="col-md-2">
+<div class="col-md-1">
 </div>
-<div class="col-md-8 text-center">
-<form action="/insert_financing" method="post">
-{{csrf_field()}}
-(You must have financing available or be approved for financing in order to obtain your VISA. 
-We recommend getting approved, getting your VISA, and then taking the loan out.) <br>
+<div class="col-md-10">
+<div id="list_visa">
+<form action="/insert_financing" method="post"> {{csrf_field()}}
 
+(You must have financing available or be approved for financing in order to obtain your VISA. 
+We recommend getting approved, getting your VISA, and then taking the loan out.)
+<br>
 I already have 18,500$ 
 <input type="checkbox" name="financing" id="financingYes" value="1" onchange="this.form.submit()"/>
-<br>
+
 I need financing
 <input type="checkbox" name="financing" id="financingNo" value="0"/>
-<input type="submit" name"submit" value="Add">
-
-<div>
-b.i. Since we are a coding bootcamp, traditional student financing is not an option. The best option is to obtain a ‘personal loan.’ We also recommend stating the purpose of the loan as “Travel.”  
-b.i.1. We recommend applying to your local bank first.
-b.i.2. Another good place to start is www.lendingtree.com Lending Tree also offers a free credit rating. 
-b.i.3. https://personalloans.com/
-b.i.4. https://www.lendingclub.com/loans/personal-loans
-b.i.5. https://apply.santanderbank.com/personal/forms/ploan.aspx
-b.i.6. https://www.marcus.com/us/en
-b.i.7. Credit Card
-</div>
-
-<br><br><br>
-
+<input class="btn-sm btn-default" type="submit" name"submit" value="Add">
 </form>
-
-<form action="/insert_insurance" method="post">
-{{csrf_field()}}
-Insurance form filled out
+</div>
+<div id="list2">
+   <ol>
+   <li><p>Since we are a coding bootcamp, traditional student financing is not an option. The best option is to obtain a ‘personal loan.’ We also recommend stating the purpose of the loan as “Travel.”  </p></li>
+   <li><p> We recommend applying to your local bank first.</p></li>
+   <li><p>Another good place to start is www.lendingtree.com Lending Tree also offers a free credit rating. </p></li>
+   <li><p> <a href="https://personalloans.com">personalloans.com</a></p></li>
+   <li><p> <a href="https://www.lendingclub.com/loans/personal-loans">lendingclub.com</a></p></li>
+   <li><p> <a href="https://apply.santanderbank.com/personal/forms/ploan.aspx">santanderbank.com</a></p></li>
+   <li><p> <a href="https://www.marcus.com/us/en">marcus.com</a></p></li>
+   <li><p>Credit Card</p></li>
+</ol>
+</div>
+<div id="list_visa">
+<form action="/insert_insurance" method="post"> {{csrf_field()}}
+Insurance form filled out?
+<br>
 Yes 
 <input type="checkbox" name="insurance" id="insuranceYes" value="1" onchange="this.form.submit()"/>
 
 No
 <input type="checkbox" name="insurance" id="insuranceNo" value="0"/>
-<input type="submit" name"submit" value="Add">
-
-<div>
-Info info info
-</div>
+<input class="btn-sm btn-default" type="submit" name"submit" value="Add">
 </form>
 </div>
-<div class="col-md-2">
+
+</div>
+
+<div class="col-md-1">
 </div>
 </div>
+</div>
+</div>
+
+
+
+
+
+
 
 <div class="container-fluid">
   <div class="row">
@@ -193,7 +202,7 @@ Info info info
 </div>
 <div class="col-md-10">
 
-<div id="list_visa" >
+<div id="list_visa">
     This course is 4 months long and will require a D VISA. The application process can take up to 15 days. We recommend applying 2 months before the course start date.
 </div>
 
