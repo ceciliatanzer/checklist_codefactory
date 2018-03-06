@@ -25,7 +25,14 @@ class Controller extends BaseController
     public function index(){
       $id = Auth::id();
       $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
-      return View::make('checklist', compact('students', 'id')); 
+      $checklist = DB::table('checklist')->where('user_id','=', $id)->get();
+
+
+      /*
+      var_dump($checklist);
+      exit();
+*/
+      return View::make('checklist', compact('students', 'checklist', 'id')); 
              
 
       }
@@ -79,8 +86,16 @@ class Controller extends BaseController
         'essay' => $essay,
         'user_id' => $id
     );
+    DB::table('students')->insert($data);
+    
+    $id = Auth::id();
+    $students = DB::table('students')->where('user_id','=', $id)->pluck('id');
+    //DB::insert('insert into checklist (user_id) (student_id) values(?, ?),[$name,$students[0]]');
+    DB::table('checklist')->insert(
+        ['user_id' => $id, 'students_id' => $students[0]]
+    );
 
-        DB::table('students')->insert($data);
+        
 
         return Redirect::to('checklist');
     }

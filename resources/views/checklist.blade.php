@@ -228,6 +228,8 @@ No
     </div>
     <div id="list2">
         <ol>
+
+        {{--
         <form action="/insert_pass" method="post">{{csrf_field()}} 
         <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
         Valid and signed passport or travel document (passport/travel document must be valid for at least three months after the date of departure from Austria or the Schengen zone. Further, the first issue date of your passport must not be more than 10 years ago, and it must provide at least two empty pages. In the case of minors, a notarized signature of parent or guardian is required.)
@@ -237,7 +239,26 @@ No
         No
         <input type="checkbox" name="pass"  value="0"/>
         <input class="btn-sm btn-default"  type="submit" name"submit" value="Add">  
-        </p></li> </form> 
+        </p></li> </form> --}}
+
+  <form action="/insert_pass" method="post">{{csrf_field()}} 
+
+
+<input type="radio"  name="pass"  value="1"  onchange="this.form.submit()"
+                          {{ $checklist[0]->pass == '1' ? 'checked' : '' }} >
+
+<input type="radio"  name="pass"  value="0"  onchange="this.form.submit()"
+                         {{ $checklist[0]->pass == '0' ? 'checked' : '' }} >
+
+
+</form> 
+
+
+
+
+
+
+
 
         <form action="/insert_visaform" method="post">{{csrf_field()}} 
         <li><p style="font-family: Chivo !important; font-size:18px; color:#000;">
