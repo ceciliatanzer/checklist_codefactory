@@ -70,16 +70,16 @@ var x = setInterval(function() {
 
 <nav class="navbar navbar-light bg-faded">
   <div class="row">
-  <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
-  <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/img\logo.png" alt="LOGO" width="100%" height="50px">
-                    </a>
-  </div>
+    <div class="col-lg-offset-1 col-lg-1 col-md-1 col-sm-4 col-xs-4">
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="/img\logo.jpg" alt="LOGO" width="100%" height="50px">
+        </a>
+    </div>
 
 
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-<p id="timer"></p>
-  </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <p id="timer"></p>
+    </div>
 
   </div>
 </nav>

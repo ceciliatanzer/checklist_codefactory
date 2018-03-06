@@ -34,7 +34,7 @@
         
     </div>
     <!-- the button that send u to register -->
-        <a href="{{url('/register')}}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Sign up</a>
+        <a href="{{url('/register')}}" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">SIGN UP NOW!</a>
         <h3>Refer a friend and receive 10% off your cost up to $10,000</h3>
 
     </div>
@@ -42,48 +42,6 @@
     <!-- end of the the red area -->
 
 <br>
-
-
-
-<!-- new row for chris with the pics -->
-<div class="row">
-    <!-- the whole grey box only for chris -->
-<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 polaroid">
-    <!-- col for chris pic with text inside after hover -->
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 con">
-        <img src="/img\chris.png" alt="CTO" width="100%" height="100%">
-        <div class="overlay">
-            <div class="text">-Christoph Pirringer <br> CTO</div>
-        </div>
-    </div> <!-- end for the pic div -->
-    <!-- chris text -->
-    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 cont">
-        <h3>"Coding is THE most important skill of the 21st century. With it, you can change everything."</h3>
-    </div>
-</div> <!-- end of the grey box for chris -->
-</div> <!-- end of chris row -->
-
-
-<!-- new row for student with the pics -->
-<div class="row">
-<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 polaroid">
-    <!-- text for the student -->
-    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 cont">
-        <h3>"At CodeFactory, I learned more professional skills in such a short time than I ever thought possible. Even before the End of the course, I had companies looking to hire me!"</h3>
-
-    </div>
-        <!-- col for student pic with text inside after hover -->
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 con">
-        <img src="/img\stu.png" alt="CTO" width="100%" height="100%">
-        <div class="overlay">
-            <div class="text">-Simona Mirauta</div>
-        </div>
-    </div>
-</div><!-- end of the grey box for student -->
-</div><!-- end of student row -->
-
-
-
 
 <!-- row for header text for package and perks --> 
 <div class="row">
@@ -129,6 +87,37 @@
 
 </div><!-- end package and perks -->
 
+<!-- new row for chris with the pics -->
+<div class="row">
+    <!-- the whole grey box only for chris -->
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 polaroid">
+    <!-- col for chris pic with text inside after hover -->
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 con">
+    
+        <img src="/img\ceci.jpg" alt="ceci" width="100%" height="100%">
+        <div class="overlay">
+            <div class="text">-CECILIA TANZER</div>
+        </div>
+    </div> <!-- end for the pic div -->
+    
+
+
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 con">
+    
+        
+        <img src="/img\stu.jpg" alt="stu" width="100%" height="100%">
+        <div class="overlay">
+            <div class="text">-THEODORA PATKOS</div>
+        </div>
+    </div>
+</div><!-- end of the grey box for student -->
+</div><!-- end of student row -->
+
+
+
+
+
+
 
 
 
@@ -136,12 +125,6 @@
 
 
 <div class="row">
-    <!-- big img at the end -->
-    <div class="col-lg-12">
-        <img src="/img\wien4.jpg" alt="wien" width="100%" height="313px">
-    </div>
-    
-
     <div class="col-lg-offset-2 col-lg-8">
         <h2 style="color: #831213; font-family: Chivo !important">Contact Us Here:</h2>
         <br>
@@ -149,7 +132,7 @@
         <h4>office@codefactory.wien</h4>
         <h4 style="color: #831213;">+43 699 12255185</h4>
         <br>
-        <img src="/img\logo.png" alt="LOGO" width="330px" height="120px">
+        <img src="/img\logo.jpg" alt="LOGO" width="120px" height="120px">
     </div>
     
 </div>

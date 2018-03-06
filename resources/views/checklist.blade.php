@@ -16,9 +16,9 @@
 
 <nav class="navbar navbar-light bg-faded">
   <div class="row">
-  <div class="col-lg-2">
+  <div class="col-lg-offset-1 col-lg-1 col-md-1 col-sm-4 col-xs-4">
   <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/img\logo.png" alt="LOGO" width="100%" height="50px">
+                    <img src="/img\logo.jpg" alt="LOGO" width="100%" height="50px">
 </a>
   </div>
   </div>
