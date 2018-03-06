@@ -24,8 +24,7 @@ class MyAccountController extends Controller
         $students = Students::all();
         return View::make('myaccount')
                 ->with('students', $students);
-                var_dump($students);
-                exit();
+                
         }
 
          public function store()
@@ -97,7 +96,7 @@ class MyAccountController extends Controller
 
         // redirect
         Session::flash('message', 'Successfully deleted the nerd!');
-        return Redirect::to('checklist');
+        return Redirect::to('/');
     }
 }
 

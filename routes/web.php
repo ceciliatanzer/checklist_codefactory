@@ -53,6 +53,7 @@ Route::prefix('admin')->group(function() {
   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
   Route::get('/', 'AdminController@index')->name('admin.dashboard');
+  Route::post('/', 'AdminController@index');
   Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 });
 
@@ -66,5 +67,6 @@ return view('admin',compact('students','checklist'));
 Route::resource('detail', 'AdminController');
 Route::resource('detailchecklist', 'ChecklistdetailController');
 Route::resource('myaccount', 'myaccountController');
+//Route::resource('admin', 'AdminController');
 
 
