@@ -11,8 +11,9 @@ use View;
 use Illuminate\Support\Facades\Input;
 use Session;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Foundation\Auth\User;
 use App\checklist;
-use App\User;
+
 
 
 class AdminController extends Controller
@@ -98,15 +99,10 @@ class AdminController extends Controller
      public function destroy($id)
     {
         // delete
-      /*  $students = DB::table('students')
-                    ->where('id', '=', $id)
-                    ->join('checklist', 'students.id', '=', 'checklist.students_id')
-                    ->join('users', 'students.user_id', '=', 'users.id')
-                    ->select('*')
-                   
-                    ->get();*/
-        $students = Students::find($id);
-        $students->delete();
+      
+        $students = DB::table('students')->where('id', $id)->value('user_id');
+        $user = User::find($students);
+        $user->delete();
 
         // redirect
         Session::flash('message', 'Successfully deleted the nerd!');

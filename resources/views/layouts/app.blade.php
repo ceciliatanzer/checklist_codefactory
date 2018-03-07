@@ -149,7 +149,11 @@ var x = setInterval(function() {
                                         </form>
                                     </li>
                                     <li><a href="{{ url('/checklist') }}">checklist</a></li>
+<<<<<<< Updated upstream
                                 {{--    <li><a href="{{ URL::to('myaccount/' . $students[0]) }}">myaccount</a></li>--}}
+=======
+                                 {{--   <li><a href="{{ URL::to('myaccount/' . $students[0]) }}">myaccount</a></li>--}}
+>>>>>>> Stashed changes
                                
                             
                         @endif
